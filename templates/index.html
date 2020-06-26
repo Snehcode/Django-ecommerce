@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MY STORE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  </head>
+  <body>
+    <a name="top"></a>
+    <div class="container">
+      <div class="jumbotron"> 
+        <div class="topnav">  
+          <div class="search">
+            <input type="text" class="searchTerm" placeholder="">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+           </button>
+         </div>
+            <div class="dropdown">
+              <button class="dropbtn" onclick="myFunction()">Departments
+                  <i class="fa fa-caret-down"></i>
+               </button>
+               <div class="dropdown-content" id="myDropdown">
+                   <a href="#">Health and beauty</a>
+                   <a href="#">Fashion</a>
+                  <a href="#">Accessories</a>
+                  <a href="#">Miscellaneous</a>
+            </div>
+          </div>
+          <!-- <a class="active" href="#">Departments</a> -->
+          <a href="#">Account</a>
+
+          <a href="#">Deals</a>
+
+          <a href="#">Registry</a>
+
+          <a href="#">Sell</a>
+
+          <a href="#">Help</a>
+          
+          
+          <a href="signup/" style="float:right">Sign up</a>
+
+          <img style="float: right" src="{% static 'css/images/cart.jpg'%}" width="50" height="50" alt="not found">
+
+
+        </div>
+
+          <div class="header">
+            <!-- <h3>Header</h3> -->
+            <!-- <p style="text-align: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, quam nisi minima nobis temporibus provident quas deleniti reiciendis unde quae et labore eius perferendis delectus porro eaque blanditiis libero quidem!</p> -->
+          </div>
+          
+          <div class= "section">
+          <div class="row">
+            <div class="column">
+              <h5>Welcome</h5>
+              <div class="btn-group-vertical">
+                <button onclick="location.href='login/';" type="button">Login</button>
+                <button onclick="location.href='signup/';" type="button">Create account</button>
+              </div>
+            </div>
+            <div class="column">
+              <h5>Popular Departments</h5>
+                <figure>
+                  <img src="{% static 'css/images/beauty.jpeg'%}" alt="Beauty" width=250 height=150 >
+                  <figcaption style="text-align: center;">Skincare</figcaption>
+                </figure>
+                <figure>
+                  <img src="{% static 'css/images/clothing.jpeg'%}" alt="Clothing" width=250 height=150 >
+                  <figcaption style="text-align: center;">Fashion</figcaption>
+                </figure>
+                <figure>
+                  <img src="{% static 'css/images/gardening.jpeg'%}" alt="Gardening" width=250 height=150 >
+                  <figcaption style="text-align: center;">Home and Living</figcaption>
+                </figure>
+                  
+             
+            </div>
+            <div class="column">
+              <h5>Clothing</h5>
+              <img src="{% static 'css/images/cloth.jpg'%}" alt="look" width=250 height=250  >
+              <button style="border:2px solid coral;border-radius: 5px;background-color: coral;padding:10px;margin:5px;margin-top: 10%;">Shop clothing</button>
+            </div>
+            <div class="column">
+              <h5>Deals</h5>
+              <img src="{% static 'css/images/deals.jpg'%}" alt="look" width=250 height=250  >
+              <button style="border:2px solid coral;border-radius: 5px;background-color: coral;padding:10px;margin:5px;margin-top: 10%;">Shop deals</button>
+            </div>
+          </div>
+
+        </div>
+
+       
+          <div class="back">
+            <a style="color: black" href="#top">Return to top</a>
+          </div>
+
+          <div class="footer">
+          
+            <div class="row">
+              <div class="column">
+                <h5>About</h5>
+                <p>Lorem</p>
+                <p>Ipsum</p>
+                <p>Dolor</p>
+              </div>
+              <div class="column">
+                <h5>Jobs</h5>
+                <p>Lorem</p>
+                <p>Ipsum</p>
+                <p>Dolor</p>
+              </div>
+              <div class="column">
+                <h5>Payment</h5>
+                <p>Lorem</p>
+                <p>Ipsum</p>
+                <p>Dolor</p>
+              </div>
+              <div class="column">
+                <h5>Help</h5>
+                <p>Lorem</p>
+                <p>Ipsum</p>
+                <p>Dolor</p>
+              </div>
+            </div>
+
+
+
+
+          </div>
+
+        
+
+             
+
+              </div>
+
+      </div>
+
+
+    </div>
+
+<script>
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+    }
+  }
+  </script>
+
+    
+
+  </body>
+
+
+</html>
